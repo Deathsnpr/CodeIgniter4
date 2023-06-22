@@ -1,0 +1,124 @@
+INFO - 2023-06-12 11:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-12 11:14:37 --> Undefined array key "harga"
+in APPPATH\Views\pages\produk_view.php on line 43.
+ 1 APPPATH\Views\pages\produk_view.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "harga"', 'C:\\xampp\\htdocs\\latci4\\app\\Views\\pages\\produk_view.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\latci4\\app\\Views\\pages\\produk_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/produk_view', [], true)
+ 5 APPPATH\Controllers\ProdukController.php(18): view('pages/produk_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-12 11:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-12 11:14:38 --> Undefined array key "harga"
+in APPPATH\Views\pages\produk_view.php on line 43.
+ 1 APPPATH\Views\pages\produk_view.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "harga"', 'C:\\xampp\\htdocs\\latci4\\app\\Views\\pages\\produk_view.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\latci4\\app\\Views\\pages\\produk_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/produk_view', [], true)
+ 5 APPPATH\Controllers\ProdukController.php(18): view('pages/produk_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-12 11:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-12 11:16:16 --> Undefined array key "hrg"
+in APPPATH\Views\home_view.php on line 9.
+ 1 APPPATH\Views\home_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "hrg"', 'C:\\xampp\\htdocs\\latci4\\app\\Views\\home_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\latci4\\app\\Views\\home_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('home_view', [], true)
+ 5 APPPATH\Controllers\Home.php(14): view('home_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-12 11:16:17 --> Undefined array key "hrg"
+in APPPATH\Views\home_view.php on line 9.
+ 1 APPPATH\Views\home_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "hrg"', 'C:\\xampp\\htdocs\\latci4\\app\\Views\\home_view.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\latci4\\app\\Views\\home_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('home_view', [], true)
+ 5 APPPATH\Controllers\Home.php(14): view('home_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-12 11:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-12 11:17:46 --> unlink(public/img/icikiwir.jpg): No such file or directory
+in APPPATH\Controllers\ProdukController.php on line 64.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(public/img/icikiwir.jpg): No such file or directory', 'C:\\xampp\\htdocs\\latci4\\app\\Controllers\\ProdukController.php', 64)
+ 2 APPPATH\Controllers\ProdukController.php(64): unlink('public/img/icikiwir.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->delete('4')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-12 11:17:46 --> unlink(public/img/icikiwir.jpg): No such file or directory
+in APPPATH\Controllers\ProdukController.php on line 64.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(public/img/icikiwir.jpg): No such file or directory', 'C:\\xampp\\htdocs\\latci4\\app\\Controllers\\ProdukController.php', 64)
+ 2 APPPATH\Controllers\ProdukController.php(64): unlink('public/img/icikiwir.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->delete('4')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-12 11:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-12 11:18:47 --> unlink(public/img/icikiwir.jpg): No such file or directory
+in APPPATH\Controllers\ProdukController.php on line 64.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(public/img/icikiwir.jpg): No such file or directory', 'C:\\xampp\\htdocs\\latci4\\app\\Controllers\\ProdukController.php', 64)
+ 2 APPPATH\Controllers\ProdukController.php(64): unlink('public/img/icikiwir.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->delete('4')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-12 11:18:47 --> unlink(public/img/icikiwir.jpg): No such file or directory
+in APPPATH\Controllers\ProdukController.php on line 64.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(public/img/icikiwir.jpg): No such file or directory', 'C:\\xampp\\htdocs\\latci4\\app\\Controllers\\ProdukController.php', 64)
+ 2 APPPATH\Controllers\ProdukController.php(64): unlink('public/img/icikiwir.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->delete('4')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-12 11:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-12 11:24:46 --> "barang" is not a validation rules group.
+in SYSTEMPATH\Validation\Validation.php on line 636.
+ 1 SYSTEMPATH\Validation\Validation.php(636): CodeIgniter\Validation\Exceptions\ValidationException::forGroupNotFound('barang')
+ 2 SYSTEMPATH\Validation\Validation.php(128): CodeIgniter\Validation\Validation->loadRuleGroup('barang')
+ 3 APPPATH\Controllers\ProdukController.php(26): CodeIgniter\Validation\Validation->run([...], 'barang')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-12 11:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-12 11:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-12 11:25:37 --> "brg" is not a validation rules group.
+in SYSTEMPATH\Validation\Validation.php on line 636.
+ 1 SYSTEMPATH\Validation\Validation.php(636): CodeIgniter\Validation\Exceptions\ValidationException::forGroupNotFound('brg')
+ 2 SYSTEMPATH\Validation\Validation.php(128): CodeIgniter\Validation\Validation->loadRuleGroup('brg')
+ 3 APPPATH\Controllers\ProdukController.php(26): CodeIgniter\Validation\Validation->run([...], 'brg')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProdukController->create()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProdukController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-12 11:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
