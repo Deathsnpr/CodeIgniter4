@@ -63,6 +63,9 @@ $password = [
                             <div class="invalid-feedback">Please enter your password!</div>
                         </div>
                         <div class="col-12">
+                            <a href="<?=base_url('register')?>">Register Disini</a>
+                        </div>
+                        <div class="col-12">
                             <?= form_submit('submit', 'Login', ['class' => 'btn btn-primary w-100']) ?>
                         </div>
                         <?= form_close() ?>

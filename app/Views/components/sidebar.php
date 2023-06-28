@@ -24,10 +24,17 @@
         <i class="bi bi-receipt"></i>
         <span>Produk</span>
     </a>
-    </li>       
+    </li>
+    <li class="nav-item">
+    <a class="nav-link <?php echo (uri_string()=='admin')?"":"collapsed"?>" href="<?php echo base_url()?>admin">
+        <i class="bi bi-receipt"></i>
+        <span>Admin</span>
+    </a>
+    </li>   
+    
     <?php
         }
-    ?>
+        ?>
 </ul>
 
 </aside><!-- End Sidebar-->
