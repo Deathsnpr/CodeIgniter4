@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2023 at 04:57 PM
+-- Generation Time: Jul 06, 2023 at 06:39 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -32,6 +32,8 @@ CREATE TABLE `barang` (
   `nama` varchar(100) NOT NULL,
   `jenis` varchar(50) NOT NULL,
   `harga` double NOT NULL,
+  `diskon` int(11) NOT NULL,
+  `harga_diskon` double NOT NULL,
   `keterangan` varchar(200) NOT NULL,
   `foto` varchar(200) NOT NULL,
   `jumlah` int(5) NOT NULL
@@ -41,11 +43,14 @@ CREATE TABLE `barang` (
 -- Dumping data for table `barang`
 --
 
-INSERT INTO `barang` (`id`, `nama`, `jenis`, `harga`, `keterangan`, `foto`, `jumlah`) VALUES
-(1, 'Minuman Si dalang Jaka', 'minuman', 10000, 'Philips Blender 3000 Series - HR2042/50 Kapasitas 1L (Putih)\r\n\r\nHasil blender halus tanpa gumpalan dalam 45 detik*\r\n\r\nDirancang untuk meningkatkan hasil blender sehari-hari serta didukung dengan daya ', 'minuman1.jpg', 20),
-(2, 'Jahe - Mbah Kinem -', 'microwave', 10000, 'PENGIRIMAN PAKAI CARGO KELUAR KOTA WAJIBBBB DENGAN BUBBLE !!\r\nUNTUK PENGIRIMAN DENGAM INSTANT KURIR, KITA PLASTIK WRAPPING\r\n\r\n\r\nQuick Defrost Ceramic Inside™\r\nECO Mode Deodorization\r\n- Dimensi dalam :', 'minuman2.jpeg', 15),
-(3, 'Temulawak - Mbah Kinem -', 'kompor', 10000, 'SELAMAT DATANG\r\nREADY STOCK\r\n\r\nGARANSI RESMI DENPOO 1 TAHUN\r\n\r\nBAHAN YANG COCOK, BERBAHAN DASAR STAINLESS/MAGNET\r\n\r\nSPESIFIKASI:\r\n~ push button\r\n~ overheating protection\r\n~auto shut-out without pot\r\n~', 'minuman3.jpeg', 34),
-(4, 'minuman enak', '', 10000, 'mahal bos impor og', '1686802467_18414554e65fe1f1e812.jpeg', 34);
+INSERT INTO `barang` (`id`, `nama`, `jenis`, `harga`, `diskon`, `harga_diskon`, `keterangan`, `foto`, `jumlah`) VALUES
+(1, 'Minuman Si dalang Jaka', 'minuman', 10000, 50, 5000, 'Philips Blender 3000 Series - HR2042/50 Kapasitas 1L (Putih)Hasil blender halus tanpa gumpalan dalam 45 detik*Dirancang untuk meningkatkan hasil blender sehari-hari serta didukung dengan daya ', 'minuman1.jpg', 20),
+(2, 'Jahe - Mbah Kinem -', 'microwave', 10000, 0, 0, 'PENGIRIMAN PAKAI CARGO KELUAR KOTA WAJIBBBB DENGAN BUBBLE !!\r\nUNTUK PENGIRIMAN DENGAM INSTANT KURIR, KITA PLASTIK WRAPPING\r\n\r\n\r\nQuick Defrost Ceramic Inside™\r\nECO Mode Deodorization\r\n- Dimensi dalam :', 'minuman2.jpeg', 15),
+(3, 'Temulawak - Mbah Kinem -', 'kompor', 10000, 0, 0, 'SELAMAT DATANG\r\nREADY STOCK\r\n\r\nGARANSI RESMI DENPOO 1 TAHUN\r\n\r\nBAHAN YANG COCOK, BERBAHAN DASAR STAINLESS/MAGNET\r\n\r\nSPESIFIKASI:\r\n~ push button\r\n~ overheating protection\r\n~auto shut-out without pot\r\n~', 'minuman3.jpeg', 34),
+(4, 'minuman enak', '', 10000, 0, 0, 'mahal bos impor og', '1686802467_18414554e65fe1f1e812.jpeg', 34),
+(5, 'Minuman Si dalang Jaka', '', 5000, 0, 0, 'Philips Blender 3000 Series - HR2042/50 Kapasitas 1L (Putih)Hasil blender halus tanpa gumpalan dalam 45 detik*Dirancang untuk meningkatkan hasil blender sehari-hari serta didukung dengan daya ', '', 20),
+(6, 'Minuman Si dalang Jaka', '', 10000, 0, 0, 'Philips Blender 3000 Series - HR2042/50 Kapasitas 1L (Putih)Hasil blender halus tanpa gumpalan dalam 45 detik*Dirancang untuk meningkatkan hasil blender sehari-hari serta didukung dengan daya ', '', 20),
+(7, 'Minuman Si dalang Jaka', '', 10000, 50, 5000, 'Philips Blender 3000 Series - HR2042/50 Kapasitas 1L (Putih)Hasil blender halus tanpa gumpalan dalam 45 detik*Dirancang untuk meningkatkan hasil blender sehari-hari serta didukung dengan daya ', '', 20);
 
 -- --------------------------------------------------------
 
@@ -82,7 +87,8 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id`, `username`, `total_harga`, `alamat`, `ongkir`, `status`, `created_by`, `created_date`) VALUES
-(1, 'bilun', 29000, 'bakalrejo', 9000, 0, 'bilun', '2023-06-22 04:41:32');
+(1, 'bilun', 29000, 'bakalrejo', 9000, 2, 'bilun', '2023-06-22 04:41:32'),
+(2, 'lunz', 29000, 'Themark', 9000, 2, 'lunz', '2023-07-05 04:45:06');
 
 -- --------------------------------------------------------
 
@@ -107,7 +113,9 @@ CREATE TABLE `transaksi_detail` (
 
 INSERT INTO `transaksi_detail` (`id`, `id_transaksi`, `id_barang`, `jumlah`, `diskon`, `subtotal_harga`, `created_by`, `created_date`) VALUES
 (1, 1, 1, 1, 0, 10000, 'bilun', '2023-06-22 04:41:32'),
-(2, 1, 2, 1, 0, 10000, 'bilun', '2023-06-22 04:41:32');
+(2, 1, 2, 1, 0, 10000, 'bilun', '2023-06-22 04:41:32'),
+(3, 2, 1, 1, 0, 10000, 'lunz', '2023-07-05 04:45:06'),
+(4, 2, 2, 1, 0, 10000, 'lunz', '2023-07-05 04:45:06');
 
 -- --------------------------------------------------------
 
@@ -130,7 +138,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `role`, `email`, `is_active`) VALUES
 (1, 'bilun', '827ccb0eea8a706c4c34a16891f84e7b', 'admin', '', 1),
-(2, 'lunz', '827ccb0eea8a706c4c34a16891f84e7b', 'user', '', 0),
+(2, 'lunz', '827ccb0eea8a706c4c34a16891f84e7b', 'user', '', 1),
 (3, 'jonn', '202cb962ac59075b964b07152d234b70', 'admin', 'nabilul316@gmail.com', 1),
 (5, 'farikha', '202cb962ac59075b964b07152d234b70', 'user', '', 0);
 
@@ -176,7 +184,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `registration`
@@ -188,13 +196,13 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
