@@ -31,6 +31,12 @@
         <span>Admin</span>
     </a>
     </li>   
+    <li class="nav-item">
+    <a class="nav-link <?php echo (uri_string()=='history')?"":"collapsed"?>" href="<?php echo base_url()?>history">
+        <i class="bi bi-receipt"></i>
+        <span>Transaksi Masuk</span>
+    </a>
+    </li>   
     
     <?php
         }

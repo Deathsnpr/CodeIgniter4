@@ -60,6 +60,9 @@ $routes->add('/admin', 'AdminController::create', ['filter' => 'auth']);
 $routes->add('/admin/edit/(:any)', 'AdminController::edit/$1', ['filter' => 'auth']);
 $routes->get('/admin/delete/(:any)', 'AdminController::delete/$1', ['filter' => 'auth']);
 
+//
+$routes->get('/history', 'HistoriController::index', ['filter' => 'auth']);
+$routes->add('/history/edit/(:any)', 'HistoriController::edit/$1', ['filter' => 'auth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -51,36 +51,54 @@
 			}
 
 			public function edit($id)
-			{
-				$data = $this->request->getPost();
-				$validate = $this->validation->run($data, 'barang');
-				$errors = $this->validation->getErrors();
+{
+    $data = $this->request->getPost();
+    $validate = $this->validation->run($data, 'barang');
+    $errors = $this->validation->getErrors();
 
-				if(!$errors){
-					$dataForm = [
-						'nama' => $this->request->getPost('nama'),
-						'harga' => $this->request->getPost('harga'),
-						'jumlah' => $this->request->getPost('jumlah'),
-						'keterangan' => $this->request->getPost('keterangan')
-					];
+    if (!$errors) {
+        $dataForm = [
+            'nama' => $this->request->getPost('nama'),
+            'harga' => $this->request->getPost('harga'),
+            'diskon' => $this->request->getPost('diskon'),
+            'jumlah' => $this->request->getPost('jumlah'),
+            'keterangan' => $this->request->getPost('keterangan')
+        ];
 
-					if($this->request->getPost('check')){
-						$dataFoto = $this->request->getFile('foto');
-						if ($dataFoto->isValid()){
-							$fileName = $dataFoto->getRandomName();
-							$dataFoto->move('public/img/', $fileName);
-							$dataForm['foto'] = $fileName;
-						}             
-					}
+        $diskon = $dataForm['diskon'];
+        if ($diskon != 0) {
+            $hargaAwal = $dataForm['harga'];
+            $hargaDiskon = $hargaAwal - ($hargaAwal * $diskon / 100);
+            $dataForm['harga_diskon'] = $hargaDiskon;
+        } else {
+            $dataForm['harga_diskon'] = $dataForm['harga'];
+        }
 
-					$this->produk->update($id, $dataForm);
+        $model = new produkModel();
 
-					return redirect('produk')->with('success','Data Berhasil Diubah');
-				}else{
-					return redirect('produk')->with('failed',implode("",$errors));
-				}
-				
-			}
+        $model->save($dataForm);
+
+        $session = \Config\Services::session();
+
+        $session->setFlashData('success', 'Data berhasil disimpan');
+
+        if ($this->request->getPost('check')) {
+            $dataFoto = $this->request->getFile('foto');
+            if ($dataFoto->isValid()) {
+                $fileName = $dataFoto->getRandomName();
+                $dataFoto->move('public/img/', $fileName);
+                $dataForm['foto'] = $fileName;
+            }             
+        }
+
+        $this->produk->update($id, $dataForm);
+
+        return redirect('produk')->with('success', 'Data Berhasil Diubah');
+    } else {
+        return redirect('produk')->with('failed', implode("", $errors));
+    }
+}
+
 
 			public function delete($id)
 			{
